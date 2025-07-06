@@ -77,7 +77,7 @@ def calculate_metrics(y_true, y_pred, sensitive_features, model_name):
         'DP Difference': demographic_parity_difference(
             y_true=y_true, 
             y_pred=y_pred, 
-            sensitive_features=sensitive_features  # Now properly passed as named argument
+            sensitive_features=sensitive_features  
         ),
         'EO Difference': equal_opportunity_difference(
             y_true=y_true,
