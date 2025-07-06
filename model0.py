@@ -102,7 +102,7 @@ plt.subplot(1, 2, 2)
 sns.barplot(
     x='Gender', 
     y='Prediction', 
-    data=results_df[results_df['Actual'] == 1],  # Only actually qualified
+    data=results_df[results_df['Actual'] == 1],  
     estimator=lambda x: sum(x)/len(x)
 )
 plt.title('Equal Opportunity\n(True Positive Rates by Gender)')
@@ -110,7 +110,7 @@ plt.ylabel('True Positive Rate')
 plt.ylim(0, 1)
 
 plt.tight_layout()
-plt.savefig('fairness_metrics0.png', dpi=300, bbox_inches='tight')  # Saves as PNG
+plt.savefig('fairness_metrics0.png', dpi=300, bbox_inches='tight')  
 
 plt.show()
 
@@ -121,7 +121,7 @@ plt.title("Fairness Metrics Comparison")
 plt.ylabel("Difference (Male - Female)")
 for i, v in enumerate(fairness_metrics.values()):
     plt.text(i, v + 0.01 if v > 0 else v - 0.02, f"{v:.3f}", ha='center')
-    plt.savefig('fairness_metrics1.png', dpi=300, bbox_inches='tight')  # Saves as PNG
+    plt.savefig('fairness_metrics1.png', dpi=300, bbox_inches='tight')  
 
 plt.show()
 
