@@ -83,15 +83,25 @@ from fairlearn.reductions import ExponentiatedGradient
 debiased_pipe = Pipeline([
     ('tfidf', TfidfVectorizer(max_features=5000)),
     ('mitigator', ExponentiatedGradient(
-        estimator=LogisticRegression(),
-        constraints=DemographicParity(),
-        eps=0.01
+        estimator=LogisticRegression(max_iter=1000),
+        constraints=EqualizedOdds(),
+        eps=0.1
     ))
 ])
 ```
 # Model Performance
 ## Model Accuracy
-![Alt text](./images/screenshot.png)
+### 🧪 Baseline Model - No Debiasing
+
+**Accuracy:** `0.8280`
+
+| Class / Avg     | Precision | Recall | F1-Score | Support |
+|-----------------|-----------|--------|----------|---------|
+| **Class 0**     | 0.89      | 0.85   | 0.87     | 521     |
+| **Class 1**     | 0.70      | 0.77   | 0.74     | 235     |
+| **Accuracy**    | —         | —      | 0.83     | 756     |
+| **Macro Avg**   | 0.80      | 0.81   | 0.80     | 756     |
+| **Weighted Avg**| 0.83      | 0.83   | 0.83     | 756     |
 
 ## Fairness Analysis
 
