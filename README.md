@@ -145,6 +145,7 @@ and                                                -0.032
 degree                                             -0.020
 100                                                -0.019
 
+![Alt text](./lime_case1.png)
 ==================================================
 Case 2: Hire
 True Label: Hire
@@ -164,6 +165,8 @@ and                                                -0.029
 100                                                -0.018
 66                                                 -0.017
 degree                                             -0.015
+
+![Alt text](./lime_case2.png)
 
 ==================================================
 Case 3: Hire
@@ -185,6 +188,8 @@ She                                                -0.049
 27                                                 -0.040
 and                                                -0.030
 
+![Alt text](./lime_case3.png)
+
 ==================================================
 Case 4: No Hire
 True Label: No Hire
@@ -205,6 +210,8 @@ She                                                -0.026
 39                                                 -0.017
 30                                                 -0.013
 
+![Alt text](./lime_case4.png)
+
 ==================================================
 Case 5: No Hire
 True Label: No Hire
@@ -224,6 +231,8 @@ portal                                             0.080
 19                                                 -0.037
 11                                                 0.029
 and                                                0.027
+
+![Alt text](./lime_case5.png)
 ```
 ## Mitigation results and Tradeoffs
 fairness improvements may slightly reduce accuracy(0.814667 VS 0.828) 
