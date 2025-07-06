@@ -95,9 +95,9 @@ debiased_pipe = Pipeline([
 
 ## Fairness Analysis
 
-![Alt text](./images/screenshot.png)
+![Alt text](./fairness_metrics0.png)
 
-![Alt text](./images/screenshot.png)
+![Alt text](./fairness_metrics1.png)
 
 # Explainability results 
 ## LIME results
@@ -215,6 +215,9 @@ portal                                             0.080
 11                                                 0.029
 and                                                0.027
 ```
+## Mitigation results and Tradeoffs
+fairness improvements may slightly reduce accuracy(0.814667 VS 0.828) 
+![Alt text](./fairness_metrics_debiased.png)
 
 
 
