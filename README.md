@@ -1,5 +1,18 @@
 # Fairness-Aware Hiring Model Analysis Report
 
+To run this project, install the following packages:
+
+| Package        | Description                                      | Install Command            |
+| -------------- | ------------------------------------------------ | -------------------------- |
+| `pandas`       | Data manipulation and analysis                   | `pip install pandas`       |
+| `numpy`        | Numerical computing                              | `pip install numpy`        |
+| `matplotlib`   | Plotting and visualization                       | `pip install matplotlib`   |
+| `seaborn`      | Statistical data visualization                   | `pip install seaborn`      |
+| `scikit-learn` | Machine learning library (modeling & evaluation) | `pip install scikit-learn` |
+| `fairlearn`    | Fairness evaluation metrics and mitigation       | `pip install fairlearn`    |
+| `lime`         | Model interpretability via LIME                  | `pip install lime`         |
+
+
 ## 1. Dataset Description
 ### Data Source
 - Original dataset: `original_dataset.csv` (structured hiring records) with 11 feautres:
@@ -16,7 +29,7 @@
 
 ### Sample Resume Text
 `
-"male , age 26.0, bachelor degree, with 0.0 years of experience, worked at 3.0 companies, lives 26.8 km from office, interview score 48.0/100, skill score 78.0/100, personality score 91.0/100, applied via campus recruitment" `
+"female applicant, age 30.0. She has high school and 8.0 years of experience. She has worked at 5.0 companies and lives 39.9 km from office. She scored 18.0/100 in the interview, 51.0/100 on skill tests, and 25.0/100 on personality assessments. She applied via job portal" `
 
 ## Model Architecture & Performance
 #### A simple TF-IDF + Logistic Regression model was used.
