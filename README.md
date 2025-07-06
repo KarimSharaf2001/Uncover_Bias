@@ -12,6 +12,28 @@ To run this project, install the following packages:
 | `fairlearn`    | Fairness evaluation metrics and mitigation       | `pip install fairlearn`    |
 | `lime`         | Model interpretability via LIME                  | `pip install lime`         |
 
+## 📁 Project Structure: `UNCOVER_BIAS`
+
+```plaintext
+UNCOVER_BIAS/
+├── add_resume.py                 # Generate resume summaries from candidate data
+├── model0.py                     # Main TF-IDF + Logistic Regression model, data prep, and LIME
+├── debiased_model.py             # Debiased model with fairness-aware evaluation
+│
+├── plain_resumes.csv             # Processed resumes with gender and hiring decision
+├── original_dataset.csv          # Original raw dataset
+│
+├── fairness_metrics0.png         # Baseline fairness: demographic parity
+├── fairness_metrics1.png         # Baseline fairness: comparison of metrics
+├── fairness_metrics_debiased.png # Debiased model fairness metrics
+│
+├── lime_case_1.png               # LIME explanation for Case 1
+├── lime_case_2.png               # LIME explanation for Case 2
+├── lime_case_3.png               # LIME explanation for Case 3
+├── lime_case_4.png               # LIME explanation for Case 4
+├── lime_case_5.png               # LIME explanation for Case 5
+```
+
 
 ## 1. Dataset Description
 ### Data Source
